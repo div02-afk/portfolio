@@ -1,14 +1,29 @@
-
+import { ibmPlexMono } from "@/lib/fonts";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
 import "./globals.css";
-import { ibmPlexMono } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Lokendra Kushwah",
-  description: "A software engineer who codes and designs with purpose.",
+  description: "A software developer who codes and designs with purpose.",
   icons: {
     icon: "/pfp.png",
+  },
+  openGraph: {
+    title: "Lokendra Kushwah",
+    description: "A software developer who codes and designs with purpose.",
+    url: "https://lokendra.tech",
+    images: [
+      {
+        url: "/openGraph.png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lokendra Kushwah",
+    description: "A software developer who codes and designs with purpose.",
+    images: ["/openGraph.png"],
   },
 };
 

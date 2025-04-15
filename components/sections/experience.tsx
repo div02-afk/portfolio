@@ -3,7 +3,7 @@ import ExperienceCard from "../ui/experience-card";
 const Experience = () => {
   const EXPERIENCE = [
     {
-      role: "Software Engineer Intern",
+      role: "Software developer Intern",
       company: "Unolo",
       startDate: "Feb 2025",
       endDate: "Present",

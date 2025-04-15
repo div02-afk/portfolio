@@ -7,7 +7,7 @@ const About = () => {
           <div className="mt-4">
             A&nbsp;
             <span className="border-b border-dashed border-foreground text-foreground">
-              software engineer
+              software developer
             </span>
             &nbsp; who codes and designs with purpose. I build standout products
             by blending problem-solving with design thinking&nbsp;—&nbsp;getting
