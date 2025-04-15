@@ -61,7 +61,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <DayThree />
       <DayTwo />
       <DayOne />
     </div>
