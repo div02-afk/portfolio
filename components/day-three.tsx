@@ -1,4 +1,4 @@
-
+import AnimatedCheckbox from "./ui/animated-checkbox";
 
 const DayThree = () => {
   return (
@@ -12,7 +12,7 @@ const DayThree = () => {
           </h2>
         </div>
         <div className="flex flex-col min-h-[400px] justify-center items-center gap-8 rounded-2xl bg-background dark:bg-surface p-6 shadow-xs border border-border">
-
+          <AnimatedCheckbox />
         </div>
       </div>
     </div>
