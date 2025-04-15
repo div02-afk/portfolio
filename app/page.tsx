@@ -1,6 +1,8 @@
-import About from "@/components/about";
+import About from "@/components/sections/about";
+import Experience from "@/components/sections/experience";
+import Footer from "@/components/sections/footer";
 import { GithubIcon, XIcon } from "@/components/icons";
-import Projects from "@/components/projects";
+import Projects from "@/components/sections/projects";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -47,7 +49,9 @@ export default function Page() {
         </div>
       </div>
       <About />
+      <Experience />
       <Projects />
+      <Footer />
     </div>
   );
 }
