@@ -1,17 +1,11 @@
-import { Geist_Mono, Inter } from "next/font/google";
+import { IBM_Plex_Mono } from "next/font/google";
 
-const inter = Inter({
-  axes: ["opsz"],
+const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600"],
+  variable: "--font-ibm-plex-mono",
   display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-  display: "swap",
-});
-
-export { geistMono, inter };
+export { ibmPlexMono };
 
