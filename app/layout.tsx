@@ -5,8 +5,11 @@ import "./globals.css";
 import { ibmPlexMono } from "@/lib/fonts";
 
 export const metadata: Metadata = {
-  title: "ui-animation-challenges",
-  description: "A collection of UI animation challenges.",
+  title: "Lokendra Kushwah",
+  description: "A software engineer who codes and designs with purpose.",
+  icons: {
+    icon: "/pfp.png",
+  },
 };
 
 export default function RootLayout({
