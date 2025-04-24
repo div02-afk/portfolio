@@ -3,10 +3,17 @@ import ExperienceCard from "../ui/experience-card";
 const Experience = () => {
   const EXPERIENCE = [
     {
+      role: "Software developer",
+      company: "Induced AI",
+      startDate: "Apr 2025",
+      endDate: "Present",
+      link: "https://www.induced.ai/",
+    },
+    {
       role: "Software developer Intern",
       company: "Unolo",
       startDate: "Feb 2025",
-      endDate: "Present",
+      endDate: "Apr 2025",
       link: "https://unolo.com",
     },
     {
