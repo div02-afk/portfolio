@@ -1,6 +1,6 @@
 # Lokendra Kushwah
 
-Hi, I'm **Lokendra Kushwah** – a Software Developer who codes and designs with purpose. This is my personal developer portfolio showcasing my work, experience, and the products I’m building.
+Hi, I'm **Lokendra Kushwah** – a Software Engineer who codes and designs with purpose. This is my personal developer portfolio showcasing my work, experience, and the products I’m building.
 
 > _“Getting 1% better every day.”_
 

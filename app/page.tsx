@@ -25,7 +25,7 @@ export default function Page() {
               <div className="flex flex-col items-start justify-start font-medium tracking-tight text-sm">
                 <span className="text-base">LOKENDRA KUSHWAH</span>
                 <span className="text-sm -mt-1 font-normal text-muted-foreground">
-                  SOFTWARE  DEVELOPER
+                  SOFTWARE  ENGINEER
                 </span>
               </div>
             </Link>

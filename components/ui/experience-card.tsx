@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 type ExperienceCardProps = {
+  id: number;
   companyName: string;
   role: string;
   startDate: string;
@@ -9,6 +10,7 @@ type ExperienceCardProps = {
 };
 
 const ExperienceCard = ({
+  id,
   companyName,
   role,
   startDate,
@@ -20,15 +22,24 @@ const ExperienceCard = ({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col active:scale-[0.98] transition-all hover:bg-card-foreground/[3%] p-2 md:p-4 rounded-lg md:rounded-2xl justify-center gap-2"
+      className="flex flex-col px-2 md:px-4 justify-center gap-2"
     >
-      <h3 className="text-base font-medium">{role}</h3>
-      <div className="flex w-full justify-between items-center">
-        <p className="text-sm text-muted-foreground w-[100px]">{companyName}</p>
-        <div className="flex-grow border-b border-dashed border-border" />
-        <p className="text-sm text-muted-foreground text-right w-[170px]">
-          {startDate} - {endDate}
-        </p>
+      <div className="flex justify-center items-start gap-3">
+        <div className="flex flex-col justify-center items-center">
+          <div className={` w-[1px] h-1.5 ${id === 1 ? "bg-transparent" : "bg-muted"}`} />
+          <div className={`${id === 1 ? "bg-muted-foreground" : "bg-muted"} rounded-full size-3`} />
+          <div className={` w-[1px] bg-muted ${id === 3 ? "h-0" : "h-12"}`} />
+        </div>
+        <div className="size-full">
+          <h3 className="text-base font-medium">{role}</h3>
+          <div className="flex w-full justify-between items-center">
+            <p className="text-sm text-muted-foreground w-[100px]">{companyName}</p>
+            <div className="flex-grow border-b border-dashed border-border" />
+            <p className="text-sm text-muted-foreground text-right w-[170px]">
+              {startDate} - {endDate}
+            </p>
+          </div>
+        </div>
       </div>
     </Link>
   );

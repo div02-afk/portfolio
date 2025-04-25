@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="xl:border-x border-border border-dashed p-4 max-w-screen-xl w-full mx-auto space-y-4 py-8 md:py-16">
         <div className="flex flex-col md:flex-row  w-full justify-between gap-2 md:gap-1 items-start md:items-center">
           <p className="text-xs font-normal text-muted-foreground">
-            Last updated by Lokendra on APRIL 24, 2025, 17:37 PM IST
+            Last updated by Lokendra on APRIL 25, 2025, 13:54 PM IST
           </p>
           <div className="md:flex-grow hidden border-b border-dashed border-border" />
           <div className="flex justify-center items-center">

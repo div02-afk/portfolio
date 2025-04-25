@@ -3,13 +3,15 @@ import ExperienceCard from "../ui/experience-card";
 const Experience = () => {
   const EXPERIENCE = [
     {
-      role: "Software developer",
+      id: 1,
+      role: "Frontend Engineer",
       company: "Induced AI",
       startDate: "Apr 2025",
       endDate: "Present",
       link: "https://www.induced.ai/",
     },
     {
+      id: 2,
       role: "Software developer Intern",
       company: "Unolo",
       startDate: "Feb 2025",
@@ -17,6 +19,7 @@ const Experience = () => {
       link: "https://unolo.com",
     },
     {
+      id: 3,
       role: "UI/UX Designer",
       company: "Snipe",
       startDate: "Aug 2024",
@@ -33,10 +36,11 @@ const Experience = () => {
             Experience
           </h2>
         </div>
-        <div className="flex flex-col justify-center gap-4">
+        <div className="flex flex-col justify-center gap4">
           {EXPERIENCE.map((exp, index) => (
             <ExperienceCard
               key={index}
+              id={exp.id}
               role={exp.role}
               companyName={exp.company}
               startDate={exp.startDate}

@@ -5,13 +5,13 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Lokendra Kushwah",
-  description: "A software developer who codes and designs with purpose.",
+  description: "A software engineer who codes and designs with purpose.",
   icons: {
     icon: "/pfp.png",
   },
   openGraph: {
     title: "Lokendra Kushwah",
-    description: "A software developer who codes and designs with purpose.",
+    description: "A software engineer who codes and designs with purpose.",
     url: "https://lokendra.tech",
     images: [
       {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Lokendra Kushwah",
-    description: "A software developer who codes and designs with purpose.",
+    description: "A software engineer who codes and designs with purpose.",
     images: ["/openGraph.png"],
   },
 };
