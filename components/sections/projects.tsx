@@ -14,7 +14,7 @@ const Projects = () => {
         "TAILWIND CSS",
         "PUPPETEER",
       ],
-      Livelink: "https://vask.app",
+      Livelink: "https://vaskora.vercel.app",
       gitHubLink: "https://github.com/Lokendrakushwah12/vaskora",
       date: "APR 2025",
     },
