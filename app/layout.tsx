@@ -41,6 +41,16 @@ export default function RootLayout({
           data-website-id="257c8167-a361-46a9-9bad-bfd4127e31aa"
           strategy="lazyOnload"
         />
+        <Script id="clarity-script" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "r965cx6yr7");
+          `}
+        </Script>
+
       </head>
       <body
         className={` ${ibmPlexMono.variable} font-sans uppercase antialiased bg-site-background min-h-svh`}
