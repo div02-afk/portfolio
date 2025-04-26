@@ -1,6 +1,7 @@
 import { ibmPlexMono } from "@/lib/fonts";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
+import Script from 'next/script';
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -34,6 +35,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          src="https://us.umami.is/script.js"
+          data-website-id="257c8167-a361-46a9-9bad-bfd4127e31aa"
+          strategy="lazyOnload"
+        />
+      </head>
       <body
         className={` ${ibmPlexMono.variable} font-sans uppercase antialiased bg-site-background min-h-svh`}
       >
