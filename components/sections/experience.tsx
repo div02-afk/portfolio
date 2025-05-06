@@ -1,32 +1,8 @@
+import userData from "@/data/userData";
 import ExperienceCard from "../ui/experience-card";
 
 const Experience = () => {
-  const EXPERIENCE = [
-    {
-      id: 1,
-      role: "Frontend Engineer",
-      company: "Induced AI",
-      startDate: "Apr 2025",
-      endDate: "Present",
-      link: "https://www.induced.ai/",
-    },
-    {
-      id: 2,
-      role: "Software developer Intern",
-      company: "Unolo",
-      startDate: "Feb 2025",
-      endDate: "Apr 2025",
-      link: "https://unolo.com",
-    },
-    {
-      id: 3,
-      role: "UI/UX Designer",
-      company: "Snipe",
-      startDate: "Aug 2024",
-      endDate: "Jan 2025",
-      link: "https://snipeit.ai",
-    },
-  ];
+  const { experience } = userData;
 
   return (
     <div className="border-b border-border border-dashed">
@@ -37,7 +13,7 @@ const Experience = () => {
           </h2>
         </div>
         <div className="flex flex-col justify-center gap4">
-          {EXPERIENCE.map((exp, index) => (
+          {experience.map((exp, index) => (
             <ExperienceCard
               key={index}
               id={exp.id}

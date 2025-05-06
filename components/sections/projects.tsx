@@ -1,57 +1,8 @@
+import userData from "@/data/userData";
 import ProjectCard from "../ui/project-card";
 
 const Projects = () => {
-  const PROJECTS = [
-    {
-      title: "VASKORA",
-      description:
-        "Swipe jobs, generate personalized cold emails, Resume & Messages and apply effortlessly—tailored to your resume.",
-      tags: [
-        "NEXT.JS",
-        "REACT QUERY",
-        "NODE.JS",
-        "EXPRESS.JS",
-        "TAILWIND CSS",
-        "PUPPETEER",
-      ],
-      Livelink: "https://vaskora.vercel.app",
-      gitHubLink: "https://github.com/Lokendrakushwah12/vaskora",
-      date: "APR 2025",
-    },
-    {
-      title: "CAULDRON",
-      description:
-        "Faceless Video Engine - Automate and dominate YouTube without ever showing your face!",
-      tags: ["NEXT.JS", "TAILWIND CSS", "FIREBASE", "PYTHON"],
-      Livelink: "https://cauldron.live",
-      gitHubLink: "https://github.com/Statwarts/Cauldron",
-      date: "JUN 2024",
-    },
-    {
-      title: "ANUBHAV",
-      description:
-        "It is a web-based platform that offers articles and resources focused on college placements and interview experiences.",
-      tags: [
-        "REACT.JS",
-        "TAILWIND CSS",
-        "FRAMER MOTION",
-        "NODE.JS",
-        "EXPRESS.JS",
-      ],
-      Livelink: "https://anubhav.aitoss.club",
-      gitHubLink: "https://github.com/aitoss/Anubhav-frontend-23",
-      date: "OCT 2024",
-    },
-    {
-      title: "PIXA/UI",
-      description:
-        "Pixa UI - Collection of Open Source Components for React + Tailwind-CSS for your Project.",
-      tags: ["REACT.JS", "TAILWIND CSS", "FRAMER MOTION", "NPM PACKAGE"],
-      Livelink: "https://pixa-ui-dev.vercel.app",
-      gitHubLink: "https://github.com/Lokendrakushwah12/pixaui",
-      date: "AUG 2024",
-    },
-  ];
+  const { projects } = userData;
 
   return (
     <div className="border-b border-border border-dashed">
@@ -62,7 +13,7 @@ const Projects = () => {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {PROJECTS.map((project, index) => (
+          {projects.map((project, index) => (
             <ProjectCard
               key={index}
               title={project.title}
