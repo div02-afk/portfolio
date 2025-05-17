@@ -119,7 +119,7 @@ const userData: UserData = {
       description:
         "Pixa UI - Collection of Open Source Components for React + Tailwind-CSS for your Project.",
       tags: ["REACT.JS", "TAILWIND CSS", "FRAMER MOTION", "NPM PACKAGE"],
-      Livelink: "https://pixa-ui-dev.vercel.app",
+      Livelink: "https://pixaui.com",
       gitHubLink: "https://github.com/Lokendrakushwah12/pixaui",
       date: "AUG 2024",
     },
