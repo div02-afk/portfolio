@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { GithubIcon } from "../icons";
+import TextButton from "./text-button";
 
 type ProjectCardProps = {
   title: string;
@@ -20,7 +21,10 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div className="flex flex-col min-h[200px] justify-between gap-3 rounded-2xl bg-card-foreground/[3%] hover:bg-card-foreground/[5%] transition-all border border-border border-dashed p-4">
-      <h3 className="text-lg font-normal">{title}</h3>
+      {/* <h3 className="text-lg font-normal">{title}</h3> */}
+      <span className="inline-block">
+        <TextButton text={title} textSize={18} uppercase="capitalize" />
+      </span>
       <p className="text-sm text-muted-foreground">{description}</p>
       <div className="flex gap-2 flex-wrap">
         {tags?.map((tag, index) => (

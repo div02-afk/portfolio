@@ -1,4 +1,5 @@
 import userData from "@/data/userData";
+import TextButton from "../ui/text-button";
 
 const About = () => {
   const { about } = userData;
@@ -10,8 +11,8 @@ const About = () => {
           {about.split("A software engineer")[0]}
           <div className="mt-4">
             A&nbsp;
-            <span className="border-b border-dashed border-foreground text-foreground">
-              software engineer
+            <span className="border-b border-dashed inline-block border-foreground text-foreground">
+              <TextButton text="SOFTWARE ENIGNEER" textSize={16} />
             </span>
             &nbsp;{about.split("A software engineer")[1]}
           </div>

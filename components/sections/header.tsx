@@ -4,6 +4,7 @@ import Link from "next/link";
 import { GithubIcon, XIcon } from "../icons";
 import { ThemeToggle } from "../theme-toggle";
 import { Button } from "../ui/button";
+import TextButton from "../ui/text-button";
 
 const Header = () => {
     const { name, profession, github, twitter } = userData.personalInfo;
@@ -22,7 +23,7 @@ const Header = () => {
                             loading="lazy"
                         />
                         <div className="flex flex-col items-start justify-start font-medium tracking-tight text-sm">
-                            <span className="text-base">{name}</span>
+                            <TextButton text={name} textSize={16} />
                             <span className="text-sm -mt-1 font-normal text-muted-foreground">
                                 {profession}
                             </span>

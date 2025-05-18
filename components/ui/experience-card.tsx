@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TextButton from "./text-button";
 
 type ExperienceCardProps = {
   id: number;
@@ -31,9 +32,10 @@ const ExperienceCard = ({
           <div className={` w-[1px] bg-muted ${id === 3 ? "h-0" : "h-12"}`} />
         </div>
         <div className="size-full">
-          <h3 className="text-base font-medium">{role}</h3>
+          <TextButton text={role} textSize={16} uppercase="capitalize" />
           <div className="flex w-full justify-between items-center">
-            <p className="text-sm text-muted-foreground w-[100px]">{companyName}</p>
+            <p className="text-sm text-muted-foreground w-[100px]">
+              {companyName}</p>
             <div className="flex-grow border-b border-dashed border-border" />
             <p className="text-sm text-muted-foreground text-right w-[170px]">
               {startDate} - {endDate}
