@@ -48,16 +48,16 @@ const userData: UserData = {
   about:
     "Hi, I'm Lokendra. A software engineer who codes and designs with purpose. I build standout products by blending problem-solving with design thinking — getting 1% better every day.",
   experience: [
+    // {
+    //   id: 1,
+    //   role: "Frontend Engineer",
+    //   company: "Induced AI",
+    //   startDate: "Apr 2025",
+    //   endDate: "Present",
+    //   link: "https://www.induced.ai/",
+    // },
     {
       id: 1,
-      role: "Frontend Engineer",
-      company: "Induced AI",
-      startDate: "Apr 2025",
-      endDate: "Present",
-      link: "https://www.induced.ai/",
-    },
-    {
-      id: 2,
       role: "Software developer Intern",
       company: "Unolo",
       startDate: "Feb 2025",
