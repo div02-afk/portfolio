@@ -10,8 +10,8 @@ const Header = () => {
     const { name, profession, github, twitter } = userData.personalInfo;
 
     return (
-        <div className="border-b border-border border-dashed sticky top-0 bg-site-background/80 backdrop-blur-md z-50">
-            <div className="p-4 max-w-screen-xl w-full mx-auto border-border border-dashed xl:border-x">
+        <div className="border-b border-border border-dashed fixed w-full max-w-screen-lg top-0 bg-site-background/80 backdrop-blur-md z-50">
+            <div className="p-4 w-full mx-auto border-border border-dashed xl:border-x">
                 <div className="flex items-center gap-4 justify-between h-8">
                     <Link href="/" className="flex items-center gap-2 justify-center">
                         <Image
@@ -19,7 +19,7 @@ const Header = () => {
                             alt="logo"
                             width={104}
                             height={104}
-                            className="size-10"
+                            className="size-10 object-cover rounded-md border"
                             loading="lazy"
                         />
                         <div className="flex flex-col items-start justify-start font-medium tracking-tight text-sm">

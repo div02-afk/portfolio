@@ -9,6 +9,7 @@ type ProjectCardProps = {
   liveLink: string;
   date: string;
   gitHubLink: string;
+  working?: boolean;
 };
 
 const ProjectCard = ({
@@ -18,12 +19,17 @@ const ProjectCard = ({
   liveLink,
   date,
   gitHubLink,
+  working = false,
 }: ProjectCardProps) => {
   return (
-    <div className="flex flex-col min-h[200px] justify-between gap-3 rounded-2xl bg-card-foreground/[3%] hover:bg-card-foreground/[5%] transition-all border border-border border-dashed p-4">
-      {/* <h3 className="text-lg font-normal">{title}</h3> */}
-      <span className="inline-block">
+    <div className="flex flex-col justify-between gap-3 rounded-2xl bg-card-foreground/[1%] hover:bg-card-foreground/[3%] transition-all border border-border border-dashed p-4">
+      <span className="inline-flex justify-start items-center gap-2">
         <TextButton text={title} textSize={18} uppercase="capitalize" />
+        {working && (
+          <span className="text-xs h-fit text-foreground bg-card-foreground/[5%] rounded-full px-2 py-1 ml-2">
+            WIP
+          </span>
+        )}
       </span>
       <p className="text-sm text-muted-foreground">{description}</p>
       <div className="flex gap-2 flex-wrap">

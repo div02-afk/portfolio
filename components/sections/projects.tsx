@@ -22,6 +22,7 @@ const Projects = () => {
               liveLink={project.Livelink}
               gitHubLink={project.gitHubLink}
               date={project.date}
+              working={project.working}
             />
           ))}
         </div>

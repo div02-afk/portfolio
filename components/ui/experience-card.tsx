@@ -27,9 +27,9 @@ const ExperienceCard = ({
     >
       <div className="flex justify-center items-start gap-3">
         <div className="flex flex-col justify-center items-center">
-          <div className={` w-[1px] h-1.5 ${id === 1 ? "bg-transparent" : "bg-muted"}`} />
-          <div className={`${id === 1 ? "bg-muted-foreground" : "bg-muted"} rounded-full size-3`} />
-          <div className={` w-[1px] bg-muted ${id === 3 ? "h-0" : "h-12"}`} />
+          <div className={` w-[1px] h-1.5 ${id === 1 ? "bg-transparent" : "bg-muted-foreground/30"}`} />
+          <div className={`${id === 1 ? "bg-muted-foreground" : "bg-muted-foreground/30"} rounded-full size-3`} />
+          <div className={` w-[1px] bg-muted-foreground/30 ${id === 3 ? "h-0" : "h-12"}`} />
         </div>
         <div className="size-full">
           <TextButton text={role} textSize={16} uppercase="capitalize" />
