@@ -35,11 +35,6 @@ const Header = () => {
                                 <XIcon className="size-3.5" />
                             </Link>
                         </Button>
-                        <Button variant="ghost" size="icon" asChild>
-                            <Link target="_blank" href={github}>
-                                <GithubIcon className="size-5" />
-                            </Link>
-                        </Button>
                         <ThemeToggle />
                     </div>
                 </div>
