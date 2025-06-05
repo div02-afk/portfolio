@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 import TextButton from "../ui/text-button";
 
 const Header = () => {
-    const { name, profession, github, twitter } = userData.personalInfo;
+    const { name, profession, github } = userData.personalInfo;
 
     return (
         <div className="border-b border-border border-dashed fixed w-full max-w-screen-lg top-0 bg-site-background/80 backdrop-blur-md z-50">
@@ -31,8 +31,8 @@ const Header = () => {
                     </Link>
                     <div className="flex items-center">
                         <Button variant="ghost" size="icon" asChild>
-                            <Link target="_blank" href={twitter}>
-                                <XIcon className="size-3.5" />
+                            <Link target="_blank" href={github}>
+                                <GithubIcon className="size-5" />
                             </Link>
                         </Button>
                         <ThemeToggle />
