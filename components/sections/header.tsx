@@ -1,4 +1,4 @@
-import userData from "@/data/userData";
+import userData from "@/config/userData";
 import Image from "next/image";
 import Link from "next/link";
 import { GithubIcon, XIcon } from "../icons";

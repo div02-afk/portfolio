@@ -1,4 +1,4 @@
-import userData from "@/data/userData";
+import userData from "@/config/userData";
 import TextButton from "../ui/text-button";
 
 const About = () => {

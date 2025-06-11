@@ -124,14 +124,14 @@ const userData: UserData = {
         "Pixa/UI - Curated collection of versatile Next.js components.",
       tags: ["NEXT.JS", "TAILWIND CSS", "FRAMER MOTION", "NPM PACKAGE"],
       Livelink: "https://pixaui.com",
-      gitHubLink: "https://github.com/Lokendrakushwah12/pixaui",
+      gitHubLink: "https://github.com/Lokendrakushwah12/pixa-ui",
       date: "AUG 2024",
       working: true,
     },
   ],
   lastUpdated: {
-    date: "MAY 23, 2025",
-    time: "04:58 AM IST",
+    date: "JUNE 11, 2025",
+    time: "23:12 PM IST",
   },
 };
 

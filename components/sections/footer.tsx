@@ -1,5 +1,5 @@
 "use client";
-import userData from "@/data/userData";
+import userData from "@/config/userData";
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../ui/button";

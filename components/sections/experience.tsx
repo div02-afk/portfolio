@@ -1,4 +1,4 @@
-import userData from "@/data/userData";
+import userData from "@/config/userData";
 import ExperienceCard from "../ui/experience-card";
 
 const Experience = () => {
