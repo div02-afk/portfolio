@@ -47,7 +47,7 @@ const userData: UserData = {
     twitter: "https://x.com/lokendratwt",
   },
   about:
-    "Hi, I'm Lokendra. A software engineer who codes and designs with purpose. I build standout products by blending problem-solving with design thinking — getting 1% better every day.",
+    "Hello, I'm Lokendra. A software engineer who codes and designs with purpose. I build standout products by blending problem-solving with design thinking — getting 1% better every day.",
   experience: [
     {
       id: 1,
@@ -80,12 +80,12 @@ const userData: UserData = {
       description:
         "Swipe jobs, generate personalized cold emails, Resume & Messages and apply effortlessly—tailored to your resume.",
       tags: [
-        "NEXT.JS",
-        "REACT QUERY",
-        "NODE.JS",
-        "EXPRESS.JS",
-        "TAILWIND CSS",
-        "PUPPETEER",
+        "Next.js",
+        "React Query",
+        "Node.js",
+        "Express.js",
+        "Tailwind CSS",
+        "Puppeteer",
       ],
       Livelink: "https://vaskora.vercel.app",
       gitHubLink: "https://github.com/Lokendrakushwah12/vaskora",

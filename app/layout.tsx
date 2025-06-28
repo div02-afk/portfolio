@@ -58,7 +58,7 @@ export default function RootLayout({
           </Script>
         )}
       </head>
-      <body className={` ${ibmPlexMono.variable} font-sans uppercase antialiased bg-site-background min-h-svh`}>
+      <body className={` ${ibmPlexMono.variable} font-sans antialiased bg-site-background min-h-svh`}>
         <PostHogProvider>
           <ThemeProvider
             attribute="class"

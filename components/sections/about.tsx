@@ -12,7 +12,7 @@ const About = () => {
           <div className="mt-4">
             A&nbsp;
             <span className="border-b border-dashed inline-block border-foreground text-foreground">
-              <TextButton text="SOFTWARE ENIGNEER" textSize={16} />
+              <TextButton text="Software Engineer" textSize={16} />
             </span>
             &nbsp;{about.split("A software engineer")[1]}
           </div>

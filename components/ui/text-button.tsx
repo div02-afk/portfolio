@@ -59,7 +59,7 @@ const contentButton = (
                     className="relative overflow-hidden flex"
                     style={{
                         fontSize: `${textSize}px`,
-                        lineHeight: `${textSize - 3}px`,
+                        lineHeight: `${textSize + 1.5}px`,
                         textTransform: uppercase,
                     }}
                 >
@@ -76,7 +76,7 @@ const contentButton = (
                                 className="text-foreground"
                                 variants={{
                                     initial: { y: 0 },
-                                    hover: { y: -textSize },
+                                    hover: { y: -textSize - 2 },
                                 }}
                                 transition={{
                                     type: "spring",
@@ -110,46 +110,6 @@ const contentButton = (
                         ))}
                     </div>
                 </motion.div>
-                {circleLeft && (
-                    <motion.div
-                        className="absolute top-1/2 -translate-y-1/2 -left-[7px] w-[4px] h-[4px] bg-primary rounded-full pointer-events-none"
-                        variants={{
-                            initial: { opacity: 0, x: -8, filter: "blur(1px)" },
-                            hover: {
-                                opacity: 1,
-                                x: 0,
-                                scaleX: [4, 1],
-                                filter: "blur(0px)",
-                                transition: {
-                                    type: "spring",
-                                    stiffness: 400,
-                                    damping: 20,
-                                },
-                            },
-                        }}
-                        transition={{ duration: 0.2 }}
-                    />
-                )}
-                {circleRight && (
-                    <motion.div
-                        className="absolute top-1/2 -translate-y-1/2 -right-[7px] w-[4px] h-[4px] bg-primary rounded-full pointer-events-none"
-                        variants={{
-                            initial: { opacity: 0, x: 8, filter: "blur(1px)" },
-                            hover: {
-                                opacity: 1,
-                                x: 0,
-                                scaleX: [4, 1],
-                                filter: "blur(0px)",
-                                transition: {
-                                    type: "spring",
-                                    stiffness: 400,
-                                    damping: 20,
-                                },
-                            },
-                        }}
-                        transition={{ duration: 0.2 }}
-                    />
-                )}
             </div>
         </motion.div>
     );

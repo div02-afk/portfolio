@@ -22,11 +22,11 @@ const ProjectCard = ({
   working = false,
 }: ProjectCardProps) => {
   return (
-    <div className="flex flex-col justify-between gap-3 rounded-2xl bg-card-foreground/[1%] hover:bg-card-foreground/[3%] transition-all border border-border border-dashed p-4">
+    <div className="flex flex-col justify-between gap-3 rounded-2xl bg-card-foreground/[1%] hover:bg-card-foreground/[0%] shadow-xs transition-all border border-border border-dashed p-4">
       <span className="inline-flex justify-start items-center gap-2">
         <TextButton text={title} textSize={18} uppercase="capitalize" />
         {working && (
-          <span className="text-xs h-fit text-foreground bg-card-foreground/[5%] rounded-full px-2 py-1 ml-2">
+          <span className="ml-2 text-xs text-foreground border border-blue-400/20 bg-blue-100 dark:bg-blue-400/30 transition-all rounded-md px-2 py-0.5">
             WIP
           </span>
         )}
@@ -36,7 +36,7 @@ const ProjectCard = ({
         {tags?.map((tag, index) => (
           <span
             key={index}
-            className="text-xs text-muted-foreground bg-card-foreground/[5%] rounded-full px-2 py-1"
+            className="text-xs text-muted-foreground border bg-card-foreground/[2%] hover:bg-card-foreground/[4%] transition-all rounded-md px-2 py-0.5"
           >
             {tag}
           </span>
