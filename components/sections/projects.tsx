@@ -12,7 +12,7 @@ const Projects = () => {
             PROJECTS
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
@@ -20,6 +20,7 @@ const Projects = () => {
               description={project.description}
               tags={project.tags}
               liveLink={project.Livelink}
+              imageSrc={project.imageSrc}
               gitHubLink={project.gitHubLink}
               date={project.date}
               working={project.working}

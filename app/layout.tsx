@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     images: [
       {
-        url: "/openGraph.png",
+        url: "/openGraph.png?v=2",
       },
     ],
   },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ["/openGraph.png"],
+    images: ["/openGraph.png?v=2"],
   },
 };
 
@@ -36,6 +36,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Favicons and App Icons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" href="/icon1.png" />
+        <link rel="icon" type="image/svg+xml" href="/icon0.svg" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png" />
         {/* Umami Analytics - Only load if configured */}
         {siteConfig.analytics?.umami?.websiteId && (
           <Script
@@ -58,7 +66,7 @@ export default function RootLayout({
           </Script>
         )}
       </head>
-      <body className={` ${ibmPlexMono.variable} font-sans antialiased bg-site-background min-h-svh`}>
+      <body className={` ${ibmPlexMono.variable} font-sans antialiased bg-site-background noise-overlay min-h-svh`}>
         <PostHogProvider>
           <ThemeProvider
             attribute="class"

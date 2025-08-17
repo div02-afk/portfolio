@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { GithubIcon } from "../icons";
 import TextButton from "./text-button";
@@ -6,7 +7,8 @@ type ProjectCardProps = {
   title: string;
   description: string;
   tags: string[];
-  liveLink: string;
+  liveLink?: string;
+  imageSrc?: string;
   date: string;
   gitHubLink: string;
   working?: boolean;
@@ -17,12 +19,20 @@ const ProjectCard = ({
   description,
   tags,
   liveLink,
+  imageSrc,
   date,
   gitHubLink,
   working = false,
 }: ProjectCardProps) => {
   return (
-    <div className="flex flex-col justify-between gap-3 rounded-2xl bg-card-foreground/[1%] hover:bg-card-foreground/[0%] shadow-xs transition-all border border-border border-dashed p-4">
+    <div className="flex flex-col justify-between gap-3 rounded-2xl bg-card-foreground/[1%] hover:bg-card-foreground/[0%] shadow-xs transition-all border border-border border-dashed p-2 sm:p-4">
+      <Image
+        src={imageSrc || "/projects/default.webp"}
+        alt={title}
+        width={1000}
+        height={1000}
+        className="w-full h-[11rem] md:h-[25rem] lg:h-[29rem] object-top rounded-md"
+      />
       <span className="inline-flex justify-start items-center gap-2">
         <TextButton text={title} textSize={18} uppercase="capitalize" />
         {working && (
@@ -44,14 +54,18 @@ const ProjectCard = ({
       </div>
       <div className="flex items-center justify-between mt-2">
         <div className="flex justify-center items-center gap-2">
-          <Link
-            href={liveLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground text-sm hover:underline transition-all"
-          >
-            Live link
-          </Link>
+          {
+            liveLink && (
+              <Link
+                href={liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground text-sm hover:underline transition-all"
+              >
+                Live link
+              </Link>
+            )
+          }
           <Link
             href={gitHubLink}
             target="_blank"

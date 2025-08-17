@@ -237,3 +237,16 @@
 @utility max-w-screen-* {
   max-width: --value(--breakpoint- *);
 }
+
+.noise-overlay::before {
+  content: "";
+  position: fixed;
+  left: -10rem;
+  z-index: 9999;
+  top: -10rem;
+  width: calc(100% + 20rem);
+  height: calc(100% + 20rem);
+  background-image: url("/noise.png");
+  opacity: 0.5;
+  pointer-events: none;
+}

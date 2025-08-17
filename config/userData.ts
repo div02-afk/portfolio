@@ -19,8 +19,9 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
-  Livelink: string;
+  Livelink?: string;
   gitHubLink: string;
+  imageSrc?: string;
   date: string;
   working?: boolean;
 }
@@ -76,30 +77,22 @@ const userData: UserData = {
   ],
   projects: [
     {
-      title: "VASKORA",
-      description:
-        "Swipe jobs, generate personalized cold emails, Resume & Messages and apply effortlessly—tailored to your resume.",
-      tags: [
-        "Next.js",
-        "React Query",
-        "Node.js",
-        "Express.js",
-        "Tailwind CSS",
-        "Puppeteer",
-      ],
-      Livelink: "https://vaskora.vercel.app",
-      gitHubLink: "https://github.com/Lokendrakushwah12/vaskora",
-      date: "APR 2025",
-      working: true,
+      title: "STASHR",
+      description: "Organize Your Bookmarks",
+      tags: ["Next.js", "React Query", "Typescript", "Tailwind CSS", "MongoDB"],
+      Livelink: "https://stashr.in",
+      gitHubLink: "https://github.com/Lokendrakushwah12/stashr",
+      imageSrc: "/projects/stashr.webp",
+      date: "AUG 2025",
+      working: false,
     },
     {
-      title: "CAULDRON",
-      description:
-        "Faceless Video Engine - Automate and dominate YouTube without ever showing your face!",
-      tags: ["NEXT.JS", "TAILWIND CSS", "FIREBASE", "PYTHON"],
-      Livelink: "https://cauldron.live",
-      gitHubLink: "https://github.com/Statwarts/Cauldron",
-      date: "JUN 2024",
+      title: "MEET-BOT",
+      description: "Real-Time Meeting Transcription Made Effortless",
+      tags: ["NODE.JS", "WebSocket", "Redis", "Puppeteer"],
+      gitHubLink: "https://github.com/Lokendrakushwah12/meet-bot",
+      imageSrc: "/projects/meet-bot.webp",
+      date: "MAR 2025",
       working: false,
     },
     {
@@ -115,6 +108,7 @@ const userData: UserData = {
       ],
       Livelink: "https://anubhav.aitoss.club",
       gitHubLink: "https://github.com/aitoss/Anubhav-frontend-23",
+      imageSrc: "/projects/anubhav.webp",
       date: "OCT 2024",
       working: false,
     },
@@ -125,6 +119,7 @@ const userData: UserData = {
       tags: ["NEXT.JS", "TAILWIND CSS", "FRAMER MOTION", "NPM PACKAGE"],
       Livelink: "https://pixaui.com",
       gitHubLink: "https://github.com/Lokendrakushwah12/pixa-ui",
+      imageSrc: "/projects/pixa.webp",
       date: "AUG 2024",
       working: true,
     },
