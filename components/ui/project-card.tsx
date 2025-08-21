@@ -25,13 +25,13 @@ const ProjectCard = ({
   working = false,
 }: ProjectCardProps) => {
   return (
-    <div className="flex flex-col justify-between gap-2 rounded-2xl bg-card-foreground/[1%] hover:bg-card-foreground/[0%] shadow-xs transition-all border border-border border-dashed p-2 sm:p-4">
+    <div className="flex flex-col justify-between gap-1 rounded-2xl bg-card-foreground/[1%] hover:bg-card-foreground/[0%] shadow-xs transition-all border border-border border-dashed p-2 sm:p-4">
       <Image
         src={imageSrc || "/projects/default.webp"}
         alt={title}
-        width={1000}
-        height={1000}
-        className="w-full h-[11rem] md:h-[25rem] lg:h-[29rem] object-cover object-top rounded-md"
+        width={600}
+        height={600}
+        className="w-full h-[11rem] object-cover object-top rounded-md"
       />
       <span className="inline-flex justify-start items-center -mb-2 gap-2">
         <TextButton text={title} textSize={18} uppercase="capitalize" />
