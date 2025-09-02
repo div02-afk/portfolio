@@ -38,8 +38,8 @@ export default function RootLayout({
       <head>
         {/* Favicons and App Icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" href="/icon1.png" />
-        <link rel="icon" type="image/svg+xml" href="/icon0.svg" />
+        {/* <link rel="icon" type="image/png" href="/icon1.png" />
+        <link rel="icon" type="image/svg+xml" href="/icon0.svg" /> */}
         <link rel="apple-touch-icon" href="/apple-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png" />

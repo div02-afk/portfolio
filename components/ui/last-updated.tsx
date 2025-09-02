@@ -5,8 +5,8 @@ const getCachedPortfolioUpdate = unstable_cache(
     async () => {
         try {
             const lastUpdate = await getRepoLastUpdate({
-                owner: 'lokendrakushwah12',
-                repo: 'lokendra.tech',
+                owner: 'div02-afk',
+                repo: 'portfolio',
                 token: process.env.GITHUB_TOKEN
             });
 
@@ -48,7 +48,7 @@ const LastUpdated = async () => {
 
     return (
         <p className="text-xs font-normal text-muted-foreground">
-            Last updated by Lokendra on {date}, {time}
+            Last updated by Divyam on {date}, {time}
         </p>
     )
 }

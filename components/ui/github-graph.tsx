@@ -12,7 +12,7 @@ const GitHubGraph = () => {
         <div className="flex justify-center">
             <div className="w-full max-w-4xl mx-auto border border-dashed rounded-lg  p-2 overflow-x-auto">
                 <GitHubCalendar
-                    username="Lokendrakushwah12"
+                    username="div02-afk"
                     colorScheme={resolvedTheme === "light" ? "light" : "dark"}
                 />
             </div>

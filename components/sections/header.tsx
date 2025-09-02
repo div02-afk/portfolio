@@ -5,9 +5,10 @@ import { GithubIcon, XIcon } from "../icons";
 import { ThemeToggle } from "../theme-toggle";
 import { Button } from "../ui/button";
 import TextButton from "../ui/text-button";
+import { Linkedin } from "lucide-react";
 
 const Header = () => {
-    const { name, profession, github, twitter } = userData.personalInfo;
+    const { name, profession, github, twitter,linkedIn } = userData.personalInfo;
 
     return (
         <div className="border-b border-border border-dashed fixed w-full max-w-4xl top-0 bg-site-background/90 backdrop-blur-xl z-50">
@@ -33,6 +34,11 @@ const Header = () => {
                         <Button variant="ghost" size="icon" asChild>
                             <Link target="_blank" href={github}>
                                 <GithubIcon className="size-5" />
+                            </Link>
+                        </Button>
+                        <Button variant="ghost" size="icon" asChild>
+                            <Link target="_blank" href={linkedIn}>
+                                <Linkedin className="size-5" />
                             </Link>
                         </Button>
                         <Button variant="ghost" size="icon" asChild>
