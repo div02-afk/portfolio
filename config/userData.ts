@@ -50,7 +50,7 @@ const userData: UserData = {
     linkedIn: "https://www.linkedin.com/in/sharma-divyam/",
   },
   about:
-    "Hello, I'm Divyam. A software engineer who codes and designs with purpose. I build standout products by blending problem-solving with design thinking — getting 1% better every day.",
+    "Hello, I'm Divyam.\n I create software that solves problems and scales, always learning by trying a bit of everything.",
   experience: [
     {
       id: 1,
@@ -93,7 +93,7 @@ const userData: UserData = {
     {
       title: "Cauldron",
       description:
-        "It's a video generation platform that allows users to create videos using AI.",
+        "Video generation platform that allows users to create videos using AI.",
       tags: [
         "REACT.JS",
         "MOVIEPY",

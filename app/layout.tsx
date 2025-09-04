@@ -45,16 +45,16 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png" />
         <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png" />
         {/* Umami Analytics - Only load if configured */}
-        {siteConfig.analytics?.umami?.websiteId && (
+        {/* {siteConfig.analytics?.umami?.websiteId && (
           <Script
             src={siteConfig.analytics.umami.url}
             data-website-id={siteConfig.analytics.umami.websiteId}
             strategy="lazyOnload"
           />
-        )}
+        )} */}
 
         {/* Microsoft Clarity - Only load if configured */}
-        {siteConfig.analytics?.clarity?.projectId && (
+        {/* {siteConfig.analytics?.clarity?.projectId && (
           <Script id="clarity-script" strategy="afterInteractive">
             {`
               (function(c,l,a,r,i,t,y){
@@ -64,7 +64,7 @@ export default function RootLayout({
               })(window, document, "clarity", "script", "${siteConfig.analytics.clarity.projectId}");
             `}
           </Script>
-        )}
+        )} */}
       </head>
       <body className={` ${ibmPlexMono.variable} font-sans antialiased bg-site-background noise-overlay min-h-svh`}>
         <PostHogProvider>
