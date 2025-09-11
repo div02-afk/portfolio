@@ -68,13 +68,13 @@ const userData: UserData = {
       endDate: "Mar 2025",
       link: "",
     },
-
   ],
   projects: [
     {
       title: "Light Hooks",
-      description: "A React and TypeScript based hook library for rapid web development.",
-      tags: ["Typescript","React.js"],
+      description:
+        "A React and TypeScript based hook library for rapid web development.",
+      tags: ["Typescript", "React.js"],
       Livelink: "https://www.lighthooks.com/",
       gitHubLink: "https://github.com/Gourav2609/light-hooks",
       imageSrc: "/projects/lighthooks.webp",
@@ -108,7 +108,37 @@ const userData: UserData = {
       date: "OCT 2024",
       working: false,
     },
-    
+    {
+      title: "simpleSearch",
+      description:
+        "Rust CLI that performs Google Custom Search queries, optionally summarizes results with Gemini, and supports Pirate Bay scraping.",
+      tags: ["RUST", "TOKIO", "REQWEST", "CLAP", "HEADLESS CHROME"],
+      gitHubLink: "https://github.com/div02-afk/simpleSearch",
+      // Placeholder image (update when a dedicated image is added)
+      imageSrc: "/projects/simple-search.webp",
+      Livelink:"https://crates.io/crates/simpleSearch",
+      date: "NOV 2024",
+      working: false,
+    },
+    {
+      title: "simpleShare",
+      description:
+        "Peer-to-peer file sharing app using WebRTC, multi-connection splitting, and a lightweight Socket.IO signaling server.",
+      tags: [
+        "WEBRTC",
+        "REACT",
+        "VITE",
+        "SOCKET.IO",
+        "TAILWIND CSS",
+        "FILE TRANSFER",
+      ],
+      gitHubLink: "https://github.com/div02-afk/simpleShare",
+      // Placeholder image (update when a dedicated image is added)
+      imageSrc: "/projects/simple-share.webp",
+      Livelink:"https://simpleshare.vercel.app/",
+      date: "SEP 2024",
+      working: false,
+    },
   ],
   lastUpdated: {
     date: "SEPT 02, 2025",
