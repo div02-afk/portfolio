@@ -109,7 +109,7 @@ const userData: UserData = {
       working: false,
     },
     {
-      title: "simpleSearch",
+      title: "simple Search",
       description:
         "Rust CLI that performs Google Custom Search queries, optionally summarizes results with Gemini, and supports Pirate Bay scraping.",
       tags: ["RUST", "TOKIO", "REQWEST", "CLAP", "HEADLESS CHROME"],
@@ -121,7 +121,7 @@ const userData: UserData = {
       working: false,
     },
     {
-      title: "simpleShare",
+      title: "simple Share",
       description:
         "Peer-to-peer file sharing app using WebRTC, multi-connection splitting, and a lightweight Socket.IO signaling server.",
       tags: [
