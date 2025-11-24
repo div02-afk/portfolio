@@ -50,10 +50,18 @@ const userData: UserData = {
     linkedIn: "https://www.linkedin.com/in/sharma-divyam/",
   },
   about:
-    "Hello, I'm Divyam.\n I create software that solves problems and scales, always learning by trying a bit of everything.",
+"Hello, I'm Divyam.\n I build scalable, reliable software and continuously improve by exploring new technologies and ideas.",
   experience: [
     {
       id: 1,
+      role: "Software Engineer Intern",
+      company: "Lumyst",
+      startDate: "Nov 2025",
+      endDate: "NOW",
+      link: "https://www.lumystai.com/",
+    },
+    {
+      id: 2,
       role: "Software Engineer Intern",
       company: "Mastercard",
       startDate: "May 2025",
@@ -61,7 +69,7 @@ const userData: UserData = {
       link: "https://www.mastercard.com/",
     },
     {
-      id: 2,
+      id: 3,
       role: "Backend developer Intern",
       company: "LeadExpo",
       startDate: "Jan 2025",
