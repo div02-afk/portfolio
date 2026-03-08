@@ -57,7 +57,7 @@ const userData: UserData = {
       role: "Software Engineer Intern",
       company: "Lumyst",
       startDate: "Nov 2025",
-      endDate: "NOW",
+      endDate: "Mar 2026",
       link: "https://www.lumystai.com/",
     },
     {
