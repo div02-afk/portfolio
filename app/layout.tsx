@@ -3,7 +3,6 @@ import { siteConfig } from "@/config/site";
 import { ibmPlexMono } from "@/lib/fonts";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
-import Script from 'next/script';
 import "./globals.css";
 
 export const metadata: Metadata = {
