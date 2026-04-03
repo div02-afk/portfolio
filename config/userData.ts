@@ -79,6 +79,15 @@ const userData: UserData = {
   ],
   projects: [
     {
+      title:"Task-Queue",
+      description: "A distributed task queue system built with go and redis, designed for performance, isolation and scalability.",
+      tags: ["GO", "REDIS", "DOCKER", "WASM"],
+      gitHubLink: "https://github.com/div02-afk/task-queue",
+      imageSrc: "/projects/task-queue.webp",
+      date: "MAR 2026",
+      working: false,
+    },
+    {
       title: "Light Hooks",
       description:
         "A React and TypeScript based hook library for rapid web development.",

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import TextButton from "./text-button";
 
@@ -34,22 +36,27 @@ const ExperienceCard = ({
     <Link
       // href={`/experience/${slug}`}
       href={link}
+      onClick={(e)=>{{
+        if(link === ""){
+          e.preventDefault()
+        }
+      }}}
       target="_blank"
       className="flex flex-col px-2 md:px-4 justify-center gap-2 group"
     >
       <div className="flex justify-center items-start gap-3">
         <div className="flex flex-col justify-center items-center">
-          <div className={`w-[1px] h-3 ${id === 1 ? "bg-transparent" : "bg-muted-foreground/30"}`} />
+          <div className={`w-px h-3 ${id === 1 ? "bg-transparent" : "bg-muted-foreground/30"}`} />
           <div className={`${id === 1 ? "bg-muted-foreground" : "bg-muted-foreground/30"} rounded-full size-3 group-hover:bg-foreground transition-colors`} />
-          <div className={`w-[1px] bg-muted-foreground/30 ${id === 3 ? "h-0" : "h-12"}`} />
+          <div className={`w-px bg-muted-foreground/30 ${id === 3 ? "h-0" : "h-12"}`} />
         </div>
         <div className="size-full">
           <TextButton text={role} textSize={16} uppercase="capitalize" />
           <div className="flex w-full justify-between items-center">
-            <p className="text-sm text-muted-foreground w-[100px] group-hover:text-foreground transition-colors">
+            <p className="text-sm text-muted-foreground w-25 group-hover:text-foreground transition-colors">
               {companyName}</p>
-            <div className="flex-grow border-b border-dashed border-border" />
-            <p className="text-sm text-muted-foreground text-right w-[170px] group-hover:text-foreground transition-colors">
+            <div className="grow border-b border-dashed border-border" />
+            <p className="text-sm text-muted-foreground text-right w-42.5 group-hover:text-foreground transition-colors">
               {startDate} - {endDate}
             </p>
           </div>
