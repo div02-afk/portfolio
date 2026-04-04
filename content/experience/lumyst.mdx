@@ -1,0 +1,51 @@
+---
+slug: 'lumyst'
+role: 'Software Engineer Intern'
+company: 'Lumyst'
+startDate: 'Nov 2025'
+endDate: 'Mar 2026'
+companyUrl: 'https://www.lumystai.com/'
+summary: 'Optimized the Call Trace feature, transitioning algorithms from DFS to BFS, mitigating L3 CPU cache eviction, and porting logic to Rust for multithreaded performance.'
+---
+
+During my tenure at Lumyst—a tool suite dedicated to better code understanding via graphs and visualizations—I spearheaded the optimization and development of the **Call Trace** feature. This tool visualizes the complete flow of function calls to simplify complex application logic. By analyzing and optimizing execution bottlenecks, I iteratively improved its speed, memory footprint, and user experience.
+
+## The Evolution of Call Trace
+
+Initially, Call Trace suffered from processing bottlenecks on large codebases. Below is the journey of how I systematically analyzed, debugged, and optimized it.
+
+### 1. Caching & Memory Management
+The core issue was slow execution times due to redundant parsing and retracing of the same logical paths.
+
+*   **Node Info Caching:** Implemented a cache storing node metadata (children, parent info, edge types, node type), yielding an immediate average performance improvement of **30-40%**.
+*   **Persistent & Invalidation-Aware Caching:** Extended caching to frameworks and routes. I developed file-watchers to invalidate stale caches on active file changes, enabling persistent caching for historically expensive operations.
+*   **LRU Cache Implementation:** As caching grew to include robust data like summaries and classifications, memory utilization spiked. I introduced a Least Recently Used (LRU) cache protocol to strictly control and bound memory usage.
+
+### 2. Algorithmic Overhaul: From DFS to BFS
+Under the original Depth-First Search (DFS) architecture, users were stuck with an ambiguous loading spinner since DFS lacked visibility into fan-out, making progress tracking impossible.
+
+*   **Breadth-First Search (BFS) Transition:** I pivoted the architecture to a BFS model to calculate total tree fan-out prior to deep traversal. This enabled a **real-time progress tracker** displaying nodes processed, remaining traversal payload, and files pending.
+*   **Memory-Optimized Cycle Detection:** BFS introduced a massive memory footprint for cycle detection. Storing historical sets for ~50k nodes with depths of up to 200 caused high memory utilization natively.
+*   **Sparse-Set Parent-Pointer Walk:** To resolve this, I formulated a memory-efficient `parent-pointer` object-linked list to traverse ancestors. To mitigate the resulting `O(depth)` calculation overhead per node step, I developed a sparse-set interval algorithm—storing sets every `k=10-16` nodes—reducing time complexity back down to an optimal `O(k)` for cycle detections.
+
+### 3. Profiling & The CPU Cache Wall
+As the team introduced new trace features, speeds degraded. I utilized **SpeedScope** to generate flamegraphs and target exact function inefficiencies.
+
+*   **Targeted Optimization:** Flamegraph profiling highlighted that `tree-sitter` parsing was the primary bottleneck. By adjusting strategy to cache all parsed trees, execution improved by **10-15%**. Additional granular micro-optimizations yielded another **8%** speedup across trailing functions.
+*   **The Multithreading Experiment:** Hitting a single-thread ceiling, I designed a multi-worker orchestration system with batched queues. Because random batching ruined cache hit rates, I grouped batches by files using sticky worker allotment.
+*   **L3 Cache Eviction Discovery:** Surprisingly, thread pools were 10-20% *slower*. Deep-dive research revealed that `tree-sitter` is heavily dependent on CPU caches. Running concurrent parses inherently evicted the core-shared L3 CPU cache, completely neutralizing theoretical parallelism gains and exposing hardware-level limitations.
+
+### 4. The Native Rust Solution
+To truly scale, Node.js paradigms were no longer sufficient.
+
+*   **Rust & Node-API (N-API):** After exhausting architectural optimizations in JavaScript, I ported the entire core trace logic into **Rust**. Utilizing raw native threads and bindings via Node-API bypassed the V8 engine overhead entirely, bypassing the prior bottlenecks and delivering exceptional speed.
+
+## Additional Features & Enhancements
+
+Beyond deep low-level algorithmic optimizations, I significantly enhanced the platform's visual architecture and feature stability:
+
+-   **Enhanced Graph Visualizations:** Improved the node layout by filtering out collapsed components natively, resolved duplicate node rendering logical bugs, and introduced interactive Interface & Class nodes.
+-   **Advanced UX Controls:** Developed supplementary workspace panels like the Relationships View (Caller/Callee hierarchy), Hide Node panels, and a comprehensive Node Legend.
+-   **Multi-Panel State Broadcasting:** Engineered synchronization mechanisms that reliably broadcasted asynchronous responses (via PKIDs) and loader statuses across simultaneous distinct panels.
+-   **Trace Capabilities Expansion:** Extended Call Trace capabilities to natively detect Express routing logic, and initiated ongoing work supporting deep decorators trace architectures.
+-   **Execution Lifecycle State:** Appended formalized statuses to `analysisVersion` objects, enabling custom version-listing and enabling automated garbage cleanup for unfinished analysis jobs.

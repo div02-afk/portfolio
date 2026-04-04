@@ -1,8 +1,8 @@
-import userData from "@/config/userData";
 import ExperienceCard from "../ui/experience-card";
+import { getAllExperiences } from "@/lib/experience";
 
-const Experience = () => {
-  const { experience } = userData;
+export default async function Experience() {
+  const experiences = getAllExperiences();
 
   return (
     <div className="border-b border-border border-dashed">
@@ -13,21 +13,19 @@ const Experience = () => {
           </h2>
         </div>
         <div className="flex flex-col justify-center gap4">
-          {experience.map((exp, index) => (
+          {experiences.map((exp, index) => (
             <ExperienceCard
               key={index}
-              id={exp.id}
-              role={exp.role}
-              companyName={exp.company}
-              startDate={exp.startDate}
-              endDate={exp.endDate}
-              link={exp.link}
+              id={index + 1}
+              role={exp.metadata.role}
+              companyName={exp.metadata.company}
+              startDate={exp.metadata.startDate}
+              endDate={exp.metadata.endDate}
+              slug={exp.metadata.slug}
             />
           ))}
         </div>
       </div>
     </div>
   );
-};
-
-export default Experience;
+};

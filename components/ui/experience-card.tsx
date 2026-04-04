@@ -9,18 +9,9 @@ type ExperienceCardProps = {
   role: string;
   startDate: string;
   endDate: string;
-  link: string;
+  slug: string;
 };
 
-// Map company names to slugs
-const getExperienceSlug = (companyName: string) => {
-  const slugMap: { [key: string]: string } = {
-    "Induced AI": "induced-ai",
-    "Unolo": "unolo", 
-    "Snipe": "snipe"
-  };
-  return slugMap[companyName] || companyName.toLowerCase().replace(/\s+/g, '-');
-};
 
 const ExperienceCard = ({
   id,
@@ -28,20 +19,11 @@ const ExperienceCard = ({
   role,
   startDate,
   endDate,
-  link
+  slug
 }: ExperienceCardProps) => {
-  const slug = getExperienceSlug(companyName);
-  
   return (
     <Link
-      // href={`/experience/${slug}`}
-      href={link}
-      onClick={(e)=>{{
-        if(link === ""){
-          e.preventDefault()
-        }
-      }}}
-      target="_blank"
+      href={`/experience/${slug}`}
       className="flex flex-col px-2 md:px-4 justify-center gap-2 group"
     >
       <div className="flex justify-center items-start gap-3">
